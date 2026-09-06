@@ -1,0 +1,35 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+**/.venv/
+**/venv/
+**/env/
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Testing / coverage
+**/.pytest_cache/
+**/.coverage
+**/.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Storage
+backend/storage/documents/*
+!backend/storage/documents/.gitkeep
+
+# OS / Editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
