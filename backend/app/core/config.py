@@ -83,6 +83,10 @@ class Settings(BaseSettings):
     EXTERNAL_REQUEST_TIMEOUT: int = 10
     IDEMPOTENCY_EXPIRE_HOURS: int = 24
 
+    # --- Security & Abuse Prevention (Phase 16) ---
+    RATE_LIMIT_LOGIN_ATTEMPTS: int = 10
+    RATE_LIMIT_LOGIN_WINDOW_SECONDS: int = 60
+
     @property
     def CORS_ALLOWED_ORIGINS(self) -> List[str]:
         """Parse CORS_ALLOWED_ORIGINS from comma-separated string."""

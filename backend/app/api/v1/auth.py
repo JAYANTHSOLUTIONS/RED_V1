@@ -10,6 +10,7 @@ from fastapi import APIRouter, Depends, Request, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_current_user, get_db, get_ip_address, get_request_id
+from app.core.rate_limiter import check_login_rate_limit
 from app.models.user import User
 from app.schemas.auth import LoginRequest, RefreshTokenRequest, TokenResponse, UserResponse
 from app.schemas.common import SuccessEnvelope, success_envelope
@@ -29,6 +30,7 @@ async def login(
     payload: LoginRequest,
     request: Request,
     db: AsyncSession = Depends(get_db),
+    _rate_limit: None = Depends(check_login_rate_limit),
 ) -> dict:
     """Authenticate user by email and password, issuing access and refresh tokens."""
     token_response, _ = await auth_service.login(

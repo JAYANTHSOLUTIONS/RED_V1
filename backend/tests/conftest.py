@@ -18,8 +18,17 @@ os.environ.setdefault("DEBUG", "true")
 import pytest
 from httpx import ASGITransport, AsyncClient
 
+from app.core.rate_limiter import get_login_rate_limiter
 from app.db.session import dispose_engine
 from app.main import create_app
+
+
+@pytest.fixture(autouse=True)
+async def reset_rate_limiter():
+    """Reset the in-memory login rate limiter between tests."""
+    await get_login_rate_limiter().reset()
+    yield
+    await get_login_rate_limiter().reset()
 
 
 @pytest.fixture(autouse=True)

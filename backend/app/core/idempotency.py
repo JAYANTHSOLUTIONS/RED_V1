@@ -17,7 +17,7 @@ from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import get_settings
-from app.core.exceptions import ConflictError
+from app.core.exceptions import ConflictError, ValidationAppError
 from app.repositories.idempotency import IdempotencyRepository
 
 
@@ -56,10 +56,23 @@ class IdempotencyService:
             (cached_response, None) if completed previously.
             (None, record_id) if newly reserved for execution.
         Raises:
+            ValidationAppError if key is empty or exceeds 128 chars.
             ConflictError if key is currently PROCESSING or payload differs.
         """
+        if not key or not key.strip():
+            raise ValidationAppError(
+                "Idempotency-Key header must not be empty.",
+                code="INVALID_IDEMPOTENCY_KEY",
+            )
+        clean_key = key.strip()
+        if len(clean_key) > 128:
+            raise ValidationAppError(
+                "Idempotency-Key header must not exceed 128 characters.",
+                code="INVALID_IDEMPOTENCY_KEY",
+            )
+
         req_hash = compute_request_hash(payload)
-        existing = await self.repo.get_record(session, key=key, user_id=user_id, endpoint=endpoint)
+        existing = await self.repo.get_record(session, key=clean_key, user_id=user_id, endpoint=endpoint)
 
         if existing:
             if existing.status == "COMPLETED":
@@ -87,7 +100,7 @@ class IdempotencyService:
         expires_at = datetime.now(timezone.utc) + timedelta(hours=settings.IDEMPOTENCY_EXPIRE_HOURS)
         record = await self.repo.reserve_key(
             session=session,
-            key=key,
+            key=clean_key,
             user_id=user_id,
             endpoint=endpoint,
             request_hash=req_hash,
