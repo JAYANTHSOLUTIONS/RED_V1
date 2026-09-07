@@ -3,13 +3,14 @@
 All endpoints require authentication and consultant authorization.
 Exposes full property CRUD, lifecycle status actions, and image metadata management.
 """
-from typing import List
+from typing import List, Optional
 import uuid
 
-from fastapi import APIRouter, Depends, Query, Request, status
+from fastapi import APIRouter, Depends, Header, Request, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_db, get_ip_address, get_request_id, require_roles
+from app.core.idempotency import IdempotencyService
 from app.models.user import User
 from app.schemas.common import SuccessEnvelope, success_envelope
 from app.schemas.property import (
@@ -26,6 +27,7 @@ from app.services.property import PropertyService
 
 router = APIRouter(prefix="/properties", tags=["Properties"])
 property_service = PropertyService()
+idempotency_service = IdempotencyService()
 
 
 @router.post(
@@ -39,18 +41,39 @@ async def create_property(
     request: Request,
     current_user: User = Depends(require_roles("CONSULTANT")),
     db: AsyncSession = Depends(get_db),
+    idempotency_key: Optional[str] = Header(None, alias="Idempotency-Key"),
 ) -> dict:
-    prop = await property_service.create_property(
-        session=db,
-        data=payload,
-        actor_id=current_user.id,
-        ip_address=get_ip_address(request),
-        correlation_id=get_request_id(request),
-    )
-    return success_envelope(
-        data=PrivatePropertyResponse.model_validate(prop).model_dump(mode="json"),
-        message="Property created successfully in DRAFT status.",
-    )
+    record_id = None
+    if idempotency_key:
+        cached_resp, record_id = await idempotency_service.check_or_reserve(
+            session=db,
+            key=idempotency_key,
+            user_id=current_user.id,
+            endpoint=request.url.path,
+            payload=payload.model_dump(mode="json"),
+        )
+        if cached_resp:
+            return cached_resp
+
+    try:
+        prop = await property_service.create_property(
+            session=db,
+            data=payload,
+            actor_id=current_user.id,
+            ip_address=get_ip_address(request),
+            correlation_id=get_request_id(request),
+        )
+        resp = success_envelope(
+            data=PrivatePropertyResponse.model_validate(prop).model_dump(mode="json"),
+            message="Property created successfully in DRAFT status.",
+        )
+        if idempotency_key and record_id:
+            await idempotency_service.finalize(db, record_id, status.HTTP_201_CREATED, resp)
+        return resp
+    except Exception:
+        if idempotency_key and record_id:
+            await idempotency_service.abort(db, record_id)
+        raise
 
 
 @router.get(

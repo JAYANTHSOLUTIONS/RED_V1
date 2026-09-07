@@ -192,6 +192,9 @@ def create_app() -> FastAPI:
     configure_middleware(app)
     configure_exception_handlers(app)
     app.include_router(api_router, prefix=settings.API_V1_PREFIX)
+    from app.api.v1.health import liveness, readiness
+    app.add_api_route("/health", liveness, methods=["GET"], tags=["health"])
+    app.add_api_route("/ready", readiness, methods=["GET"], tags=["health"])
 
     # Wrap with custom exception handling ASGI middleware
     app = ExceptionHandlingASGI(app)  # type: ignore

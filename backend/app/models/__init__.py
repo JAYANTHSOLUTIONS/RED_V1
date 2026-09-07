@@ -8,6 +8,7 @@ from app.models.client import Client
 from app.models.deal import Deal, Fee
 from app.models.document import Document
 from app.models.follow_up import FollowUp
+from app.models.idempotency import IdempotencyRecord
 from app.models.lead import Enquiry, Lead
 from app.models.notification import Notification
 from app.models.property import Property, PropertyImage
@@ -25,6 +26,7 @@ __all__ = [
     "Enquiry",
     "Fee",
     "FollowUp",
+    "IdempotencyRecord",
     "Lead",
     "Notification",
     "Property",

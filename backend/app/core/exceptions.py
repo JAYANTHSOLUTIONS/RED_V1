@@ -96,7 +96,15 @@ class StorageError(AppException):
     default_message = "A storage error occurred. Please try again shortly."
 
 
-class ServiceUnavailableError(AppException):
+class ServiceUnavailableError(DatabaseError):
     code = "SERVICE_UNAVAILABLE"
     status_code = 503
     default_message = "The service is temporarily unavailable."
+
+
+class GatewayTimeoutError(AppException):
+    """Raised when an external upstream dependency times out."""
+    code = "GATEWAY_TIMEOUT"
+    status_code = 504
+    default_message = "An upstream service timed out. Please try again shortly."
+

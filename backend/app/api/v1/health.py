@@ -10,6 +10,7 @@
 Neither endpoint exposes connection strings, credentials, or other
 infrastructure details — only a per-dependency "ok" / "unavailable" status.
 """
+import asyncio
 from typing import Awaitable, Callable
 
 from fastapi import APIRouter, Depends, status
@@ -28,7 +29,7 @@ ReadinessCheck = Callable[[AsyncSession], Awaitable[None]]
 
 
 async def check_database(db: AsyncSession) -> None:
-    await db.execute(text("SELECT 1"))
+    await asyncio.wait_for(db.execute(text("SELECT 1")), timeout=2.0)
 
 
 # Registry of readiness checks. Later phases (e.g. the Documents module

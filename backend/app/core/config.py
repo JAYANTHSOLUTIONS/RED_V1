@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     DB_POOL_SIZE: int = 5
     DB_MAX_OVERFLOW: int = 10
+    DB_POOL_TIMEOUT: int = 10
+    DB_POOL_RECYCLE: int = 1800
     DB_ECHO: bool = False
 
     # --- Auth / JWT ---
@@ -76,6 +78,10 @@ class Settings(BaseSettings):
     SMTP_FROM: str = "noreply@redconsultant.com"
     SMTP_USE_TLS: bool = True
     SMTP_TIMEOUT_SECONDS: int = 10
+
+    # --- Reliability & Resilience (Phase 15) ---
+    EXTERNAL_REQUEST_TIMEOUT: int = 10
+    IDEMPOTENCY_EXPIRE_HOURS: int = 24
 
     @property
     def CORS_ALLOWED_ORIGINS(self) -> List[str]:

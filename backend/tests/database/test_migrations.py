@@ -8,6 +8,12 @@ from alembic.config import Config
 from app.core.config import get_settings
 
 
+import asyncio
+from alembic import command
+from alembic.config import Config
+from app.core.config import get_settings
+
+
 def test_alembic_upgrade_downgrade_cycle():
     """Verify full migration upgrade -> downgrade -> upgrade cycle."""
     settings = get_settings()
@@ -17,6 +23,7 @@ def test_alembic_upgrade_downgrade_cycle():
     from app.db.session import engine
 
     # Dispose pool before dropping tables to prevent active connections holding old schema state
+    asyncio.run(engine.dispose())
     engine.sync_engine.dispose()
 
     # 1. Downgrade to base
@@ -32,4 +39,5 @@ def test_alembic_upgrade_downgrade_cycle():
     command.upgrade(alembic_cfg, "head")
 
     # Dispose pool after recreation so subsequent tests acquire fresh connections with new OIDs
+    asyncio.run(engine.dispose())
     engine.sync_engine.dispose()
