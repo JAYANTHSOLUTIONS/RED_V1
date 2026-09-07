@@ -14,12 +14,25 @@ from app.core.config import get_settings
 from app.core.exceptions import RateLimitedError
 
 
-class SlidingWindowRateLimiter:
-    """Thread-safe in-memory sliding-window rate limiter."""
+MAX_TRACKED_CLIENTS: int = 50_000
 
-    def __init__(self) -> None:
+
+class SlidingWindowRateLimiter:
+    """Thread-safe in-memory sliding-window rate limiter with memory bounding."""
+
+    def __init__(self, max_tracked_clients: int = MAX_TRACKED_CLIENTS) -> None:
         self._lock = asyncio.Lock()
-        self._requests: Dict[str, deque[float]] = defaultdict(deque)
+        self._requests: Dict[str, deque[float]] = {}
+        self.max_tracked_clients = max_tracked_clients
+
+    def _prune_stale_locked(self, cutoff: float) -> None:
+        """Prune keys with no active timestamps within the sliding window."""
+        stale_keys = [
+            k for k, q in self._requests.items()
+            if not q or q[-1] <= cutoff
+        ]
+        for k in stale_keys:
+            del self._requests[k]
 
     async def check_rate_limit(
         self,
@@ -39,6 +52,17 @@ class SlidingWindowRateLimiter:
         cutoff = now - window_seconds
 
         async with self._lock:
+            # Memory ceiling check: if dictionary is growing too large, prune stale keys
+            if len(self._requests) >= self.max_tracked_clients:
+                self._prune_stale_locked(cutoff)
+                if len(self._requests) >= self.max_tracked_clients:
+                    raise RateLimitedError(
+                        "Rate limiter capacity reached. Please try again later."
+                    )
+
+            if key not in self._requests:
+                self._requests[key] = deque()
+
             queue = self._requests[key]
             # Evict timestamps older than the sliding window
             while queue and queue[0] <= cutoff:
@@ -50,6 +74,15 @@ class SlidingWindowRateLimiter:
                 )
 
             queue.append(now)
+
+    async def prune_stale(self, window_seconds: int) -> int:
+        """Manually prune stale clients. Returns count of pruned keys."""
+        now = datetime.now(timezone.utc).timestamp()
+        cutoff = now - window_seconds
+        async with self._lock:
+            initial_count = len(self._requests)
+            self._prune_stale_locked(cutoff)
+            return initial_count - len(self._requests)
 
     async def reset(self) -> None:
         """Clear all tracked request history (useful for test isolation)."""

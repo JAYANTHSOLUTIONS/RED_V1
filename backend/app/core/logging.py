@@ -16,8 +16,16 @@ from pythonjsonlogger import jsonlogger
 
 from app.core.config import get_settings
 
+import re
+
 # Populated by RequestIdMiddleware for the lifetime of a single request.
 request_id_ctx_var: ContextVar[str] = ContextVar("request_id", default="-")
+
+SENSITIVE_PATTERNS = [
+    (re.compile(r"(Bearer\s+)[a-zA-Z0-9_\-\.]+", re.IGNORECASE), r"\1[REDACTED]"),
+    (re.compile(r'(["\']?(?:password|token|access_token|refresh_token|secret|jwt_secret_key)["\']?\s*[:=]\s*["\'])([^"\']+)(["\'])', re.IGNORECASE), r"\1[REDACTED]\3"),
+    (re.compile(r"eyJ[a-zA-Z0-9_\-]{10,}\.eyJ[a-zA-Z0-9_\-]{10,}\.[a-zA-Z0-9_\-]+"), r"[REDACTED_JWT]"),
+]
 
 
 class RequestIdFilter(logging.Filter):
@@ -25,6 +33,18 @@ class RequestIdFilter(logging.Filter):
 
     def filter(self, record: logging.LogRecord) -> bool:
         record.request_id = request_id_ctx_var.get()
+        return True
+
+
+class SensitiveDataFilter(logging.Filter):
+    """Redacts potential secrets, credentials, and tokens from log messages."""
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        if isinstance(record.msg, str):
+            msg = record.msg
+            for pattern, repl in SENSITIVE_PATTERNS:
+                msg = pattern.sub(repl, msg)
+            record.msg = msg
         return True
 
 
@@ -42,6 +62,7 @@ def configure_logging() -> None:
 
     handler = logging.StreamHandler(sys.stdout)
     handler.addFilter(RequestIdFilter())
+    handler.addFilter(SensitiveDataFilter())
 
     if settings.LOG_FORMAT == "json":
         formatter: logging.Formatter = jsonlogger.JsonFormatter(

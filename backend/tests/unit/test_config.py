@@ -70,6 +70,7 @@ def test_is_production_property(monkeypatch):
     monkeypatch.setenv("DATABASE_URL", "postgresql+asyncpg://u:p@localhost:5432/db")
     monkeypatch.setenv("JWT_SECRET_KEY", "a" * 32)
     monkeypatch.setenv("APP_ENV", "production")
+    monkeypatch.setenv("DEBUG", "false")
 
     settings = Settings(_env_file=None)
 

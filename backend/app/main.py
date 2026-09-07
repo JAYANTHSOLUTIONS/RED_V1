@@ -5,6 +5,7 @@ and the versioned API router together. Business modules register their
 routers in `app.api.v1.router`; nothing else here needs to change as the
 system grows.
 """
+import asyncio
 from contextlib import asynccontextmanager
 from typing import Callable, Any
 
@@ -163,13 +164,30 @@ def configure_exception_handlers(app: FastAPI) -> None:
         )
 
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     configure_logging()
-    logger.info("Application startup complete.")
+    settings = get_settings()
+    docs_enabled = (
+        settings.OPENAPI_DOCS_ENABLED
+        if settings.OPENAPI_DOCS_ENABLED is not None
+        else not settings.is_production
+    )
+    logger.info(
+        "Application starting up: env=%s, storage=%s, docs=%s, pool_size=%d",
+        settings.APP_ENV,
+        settings.STORAGE_BACKEND,
+        "enabled" if docs_enabled else "disabled",
+        settings.DB_POOL_SIZE,
+    )
     yield
-    await dispose_engine()
+    logger.info("Application shutting down: disposing database connections...")
+    try:
+        await asyncio.wait_for(dispose_engine(), timeout=5.0)
+    except asyncio.TimeoutError:
+        logger.warning("Database engine disposal timed out after 5.0 seconds.")
+    except Exception as exc:
+        logger.error("Error disposing database engine on shutdown: %s", str(exc))
     logger.info("Application shutdown complete.")
 
 
@@ -180,12 +198,18 @@ def create_app() -> FastAPI:
     can create isolated instances with dependency overrides.
     """
     settings = get_settings()
+    docs_enabled = (
+        settings.OPENAPI_DOCS_ENABLED
+        if settings.OPENAPI_DOCS_ENABLED is not None
+        else not settings.is_production
+    )
 
     app = FastAPI(
         title=settings.APP_NAME,
         debug=False,
-        docs_url="/docs" if not settings.is_production else None,
-        redoc_url="/redoc" if not settings.is_production else None,
+        docs_url="/docs" if docs_enabled else None,
+        redoc_url="/redoc" if docs_enabled else None,
+        openapi_url="/openapi.json" if docs_enabled else None,
         lifespan=lifespan,
     )
 

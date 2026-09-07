@@ -9,10 +9,24 @@ Business modules must import `get_settings()` rather than reading
 truth.
 """
 from functools import lru_cache
-from typing import List, Optional
+from typing import List, Optional, Set
 
-from pydantic import Field
+from pydantic import Field, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+INSECURE_SECRET_KEYS: Set[str] = {
+    "test-only-secret-key-not-for-production-use",
+    "secret",
+    "changeme",
+    "password",
+    "admin",
+    "123456",
+    "secretkey",
+    "jwtsecret",
+    "development-secret-key",
+    "test",
+    "default",
+}
 
 
 class Settings(BaseSettings):
@@ -86,6 +100,51 @@ class Settings(BaseSettings):
     # --- Security & Abuse Prevention (Phase 16) ---
     RATE_LIMIT_LOGIN_ATTEMPTS: int = 10
     RATE_LIMIT_LOGIN_WINDOW_SECONDS: int = 60
+
+    # --- Production Hardening & OpenAPI Docs (Phase 17) ---
+    OPENAPI_DOCS_ENABLED: Optional[bool] = None
+
+    @model_validator(mode="after")
+    def validate_production_settings(self) -> "Settings":
+        if self.APP_ENV == "production":
+            # 1. JWT Secret strength
+            secret = (self.JWT_SECRET_KEY or "").strip()
+            if not secret:
+                raise ValueError("JWT_SECRET_KEY must not be empty in production")
+            if secret.lower() in INSECURE_SECRET_KEYS:
+                raise ValueError(
+                    f"JWT_SECRET_KEY cannot use known default/insecure secret in production: '{secret}'"
+                )
+            if len(secret) < 32:
+                raise ValueError(
+                    f"JWT_SECRET_KEY must be at least 32 characters long in production (got {len(secret)})"
+                )
+
+            # 2. Debug mode must be disabled
+            if self.DEBUG:
+                raise ValueError("DEBUG mode must be False in production")
+
+            # 3. CORS allowed origins must not contain wildcard '*'
+            if "*" in self.CORS_ALLOWED_ORIGINS:
+                raise ValueError(
+                    "CORS_ALLOWED_ORIGINS must not contain wildcard '*' in production"
+                )
+
+            # 4. Storage configuration
+            if self.STORAGE_BACKEND.lower() == "s3":
+                if not self.STORAGE_BUCKET or not self.STORAGE_ACCESS_KEY or not self.STORAGE_SECRET_KEY:
+                    raise ValueError(
+                        "S3 storage backend requires STORAGE_BUCKET, STORAGE_ACCESS_KEY, and STORAGE_SECRET_KEY to be configured in production"
+                    )
+
+            # 5. SMTP configuration validation if enabled
+            if self.SMTP_HOST:
+                if not (1 <= self.SMTP_PORT <= 65535):
+                    raise ValueError(f"Invalid SMTP_PORT: {self.SMTP_PORT}")
+                if not self.SMTP_FROM or "@" not in self.SMTP_FROM:
+                    raise ValueError(f"Invalid SMTP_FROM address: {self.SMTP_FROM}")
+
+        return self
 
     @property
     def CORS_ALLOWED_ORIGINS(self) -> List[str]:

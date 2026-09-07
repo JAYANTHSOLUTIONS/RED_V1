@@ -14,6 +14,13 @@ from app.core.logging import get_logger
 
 logger = get_logger("app.request")
 
+HEALTH_CHECK_PATHS = {
+    "/health",
+    "/ready",
+    "/api/v1/health/live",
+    "/api/v1/health/ready",
+}
+
 
 class RequestLoggingMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
@@ -21,11 +28,52 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
         duration_ms = (time.perf_counter() - start) * 1000
 
-        logger.info(
-            "%s %s -> %s (%.1fms)",
-            request.method,
-            request.url.path,
-            response.status_code,
-            duration_ms,
-        )
+        path = request.url.path
+        status = response.status_code
+
+        # Suppress routine health check log spam (emit at DEBUG if healthy)
+        if path in HEALTH_CHECK_PATHS:
+            if status < 400:
+                logger.debug(
+                    "%s %s -> %s (%.1fms)",
+                    request.method,
+                    path,
+                    status,
+                    duration_ms,
+                )
+            else:
+                logger.warning(
+                    "%s %s -> %s (%.1fms) - Health check failure",
+                    request.method,
+                    path,
+                    status,
+                    duration_ms,
+                )
+            return response
+
+        # Routine HTTP request logging by status severity
+        if status >= 500:
+            logger.error(
+                "%s %s -> %s (%.1fms)",
+                request.method,
+                path,
+                status,
+                duration_ms,
+            )
+        elif status >= 400:
+            logger.warning(
+                "%s %s -> %s (%.1fms)",
+                request.method,
+                path,
+                status,
+                duration_ms,
+            )
+        else:
+            logger.info(
+                "%s %s -> %s (%.1fms)",
+                request.method,
+                path,
+                status,
+                duration_ms,
+            )
         return response
