@@ -1,0 +1,10 @@
+{
+  "description": "Streamline real estate operations with a professional management platform designed for brokers in Tamil Nadu, enhancing property management and client interactions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

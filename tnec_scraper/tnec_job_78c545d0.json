@@ -1,0 +1,8 @@
+{
+  "job_id": "78c545d0",
+  "status": "failed",
+  "current_step": 0,
+  "message": "Scraper error: CAPTCHA input timed out or was not provided.",
+  "timestamp": 1788966900.153502,
+  "error": "CAPTCHA input timed out or was not provided."
+}

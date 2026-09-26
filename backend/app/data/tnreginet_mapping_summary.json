@@ -1,0 +1,87 @@
+{
+  "title": "TNREGINET Administrative Master Mapping (Tamil Nadu)",
+  "source": "https://tnreginet.gov.in/portal/",
+  "total_zones": 11,
+  "total_districts": 56,
+  "total_sros": 638,
+  "total_villages": 30983,
+  "zones": [
+    {
+      "id": "15",
+      "name": "Chengalpattu",
+      "district_count": 3,
+      "sro_count": 26,
+      "village_count": 1725
+    },
+    {
+      "id": "1",
+      "name": "Chennai",
+      "district_count": 4,
+      "sro_count": 46,
+      "village_count": 1375
+    },
+    {
+      "id": "2",
+      "name": "Coimbatore",
+      "district_count": 6,
+      "sro_count": 60,
+      "village_count": 2335
+    },
+    {
+      "id": "3",
+      "name": "Cuddalore",
+      "district_count": 6,
+      "sro_count": 65,
+      "village_count": 3396
+    },
+    {
+      "id": "4",
+      "name": "Madurai",
+      "district_count": 5,
+      "sro_count": 62,
+      "village_count": 2040
+    },
+    {
+      "id": "13",
+      "name": "Ramanathapuram",
+      "district_count": 4,
+      "sro_count": 49,
+      "village_count": 5507
+    },
+    {
+      "id": "5",
+      "name": "Salem",
+      "district_count": 5,
+      "sro_count": 67,
+      "village_count": 3797
+    },
+    {
+      "id": "7",
+      "name": "Tanjore",
+      "district_count": 6,
+      "sro_count": 60,
+      "village_count": 3071
+    },
+    {
+      "id": "8",
+      "name": "Thirunelveli",
+      "district_count": 7,
+      "sro_count": 91,
+      "village_count": 1986
+    },
+    {
+      "id": "6",
+      "name": "Trichy",
+      "district_count": 5,
+      "sro_count": 58,
+      "village_count": 2374
+    },
+    {
+      "id": "9",
+      "name": "Vellore",
+      "district_count": 5,
+      "sro_count": 54,
+      "village_count": 3377
+    }
+  ]
+}

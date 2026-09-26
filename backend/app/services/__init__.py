@@ -11,6 +11,7 @@ from app.services.lead import LeadService
 from app.services.matching import DeterministicMatchingEngine
 from app.services.requirement import PropertyRequirementService
 from app.services.document import DocumentService
+from app.services import fmb_service
 
 __all__ = [
     "AuthService",
@@ -20,4 +21,5 @@ __all__ = [
     "DeterministicMatchingEngine",
     "PropertyRequirementService",
     "DocumentService",
+    "fmb_service",
 ]

@@ -1,0 +1,126 @@
+{
+  "search": {
+    "district": "Kancheepuram",
+    "taluk": "Kundrathur",
+    "village": "Madapakkam",
+    "survey_number": "99",
+    "subdivision": "8"
+  },
+  "owners": [
+    {
+      "index": 1,
+      "owner": "குருசாமி நாயுடு",
+      "relative": "கேசவல் நாயுடு",
+      "relation": "மகன்"
+    }
+  ],
+  "land_details": {
+    "land_type": "Rayathuvari / ரயத்துவாரி",
+    "land_type_eng": "Wet",
+    "land_type_tamil": "நஞ்சை",
+    "govt_pri_code": "2",
+    "soil_class": "5",
+    "soil_type_pri": "7",
+    "soil_type_sec": "1",
+    "extent_hectares": "0",
+    "extent_ares": "21",
+    "total_tax": "2.42",
+    "patta_number": "85",
+    "poramboke": "-",
+    "assessed": "No",
+    "cultivable": "No",
+    "raw_fields": {
+      "Part Ind": "-",
+      "Govt Pri Code": "2",
+      "Land Type": "Rayathuvari / ரயத்துவாரி",
+      "Irr Source": "A",
+      "Tax Rate": "-",
+      "Soil Typ Pri": "7",
+      "Soil Typ Sec": "1",
+      "Soil Class": "5",
+      "Tax Hect": "11.42",
+      "Ext Hect": "0",
+      "Ext Ares": "21",
+      "Tot Tax": "2.42",
+      "Patta No": "85",
+      "Poramboke": "-",
+      "Remarks": "-",
+      "Remarks1": "-",
+      "Form8No": "-",
+      "Form6No": "-",
+      "Assessed": "No",
+      "Cultivable": "No",
+      "Dept Name": "-",
+      "Land Type Eng": "Wet",
+      "Land Type Tamil": "நஞ்சை"
+    }
+  },
+  "guideline_value": {
+    "land_type": "Residential Special Type - I",
+    "metric_rate": "₹800",
+    "guideline_amount": "₹800"
+  },
+  "coordinates": {
+    "latitude": 12.853196,
+    "longitude": 80.048142,
+    "google_maps_url": "https://www.google.com/maps?q=12.853196,80.048142",
+    "vertices": [
+      {
+        "vertex_number": 1,
+        "latitude": 12.853047,
+        "longitude": 80.047874
+      },
+      {
+        "vertex_number": 2,
+        "latitude": 12.853411,
+        "longitude": 80.048004
+      },
+      {
+        "vertex_number": 3,
+        "latitude": 12.853361,
+        "longitude": 80.048144
+      },
+      {
+        "vertex_number": 4,
+        "latitude": 12.853345,
+        "longitude": 80.048202
+      },
+      {
+        "vertex_number": 5,
+        "latitude": 12.853261,
+        "longitude": 80.04841
+      },
+      {
+        "vertex_number": 6,
+        "latitude": 12.853073,
+        "longitude": 80.048364
+      },
+      {
+        "vertex_number": 7,
+        "latitude": 12.852982,
+        "longitude": 80.048363
+      }
+    ]
+  },
+  "document_status": {
+    "patta_available": true,
+    "patta_rendered_pdf": null,
+    "fmb_available": true,
+    "fmb_rendered_pdf": null,
+    "fmb_screenshot": null,
+    "ec_available": false,
+    "ec_rendered_pdf": null
+  },
+  "raw_sections": {
+    "Search": "District: Kancheepuram\nTaluk: Kundrathur\nVillage: Madapakkam\nSurvey number: 99\nSubdivision: 8",
+    "Owner information": "×\nOwnership Details\nLand Details\nPatta View\n#\tOwner\tRelative\tRelation\n1\tகுருசாமி நாயுடு\tகேசவல் நாயுடு\tமகன்\n#\tOwner\tRelative\tRelation\n1\tகுருசாமி நாயுடு\tகேசவல் நாயுடு\tமகன்",
+    "Land information": "×\nOwnership Details\nLand Details\nPatta View\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tA\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t1\nSoil Class\t5\nTax Hect\t11.42\nExt Hect\t0\nExt Ares\t21\nTot Tax\t2.42\nPatta No\t85\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t-\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tA\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t1\nSoil Class\t5\nTax Hect\t11.42\nExt Hect\t0\nExt Ares\t21\nTot Tax\t2.42\nPatta No\t85\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t-\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை",
+    "Patta view": "×\nOwnership Details\nLand Details\nPatta View\nPatta Document\n⛶\nPatta Document\n⛶\nFullscreen opened: True",
+    "FMB information": "FMB panel opened, but it contained no text data.\nSketch button: True",
+    "Property vertices": "Vertex Number Latitude Longitude\n1 12.853047 80.047874\n2 12.853411 80.048004\n3 12.853361 80.048144\n4 12.853345 80.048202\n5 12.853261 80.048410\n6 12.853073 80.048364\n7 12.852982 80.048363\n\nActual pinned latitude/longitude:\n12.853196, 80.048142",
+    "Guideline value": "Guide Line Value from Registration Department\n×\nLand Type:\nResidential Special Type - I\nClassification of Land Type:\nNatham-Res-Spl\nMetric Rate:\n₹800\nPrice per Hectare:\n₹3,48,48,000\nSpecific guideline block:\nMetric Rate:\n₹800\nGuideline amount:\n₹800",
+    "EC": "EC panel opened."
+  },
+  "is_cached_sample": false,
+  "message": "Live TNGIS revenue records successfully scraped and structured."
+}

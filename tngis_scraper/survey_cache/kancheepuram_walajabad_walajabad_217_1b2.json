@@ -1,0 +1,123 @@
+{
+  "search": {
+    "district": "Kancheepuram",
+    "taluk": "Walajabad",
+    "village": "Walajabad",
+    "survey_number": "217",
+    "subdivision": "1B2"
+  },
+  "owners": [
+    {
+      "index": 1,
+      "owner": "ராமலிங்கம்",
+      "relative": "நாகப்பன்",
+      "relation": "மகன்"
+    },
+    {
+      "index": 2,
+      "owner": "நடராஜன்",
+      "relative": "நாகப்பன்",
+      "relation": "மகன்"
+    },
+    {
+      "index": 3,
+      "owner": "தேவராஜன்",
+      "relative": "நாகப்பன்",
+      "relation": "மகன்"
+    }
+  ],
+  "land_details": {
+    "land_type": "Rayathuvari / ரயத்துவாரி",
+    "land_type_eng": "Dry",
+    "land_type_tamil": "புஞ்சை",
+    "govt_pri_code": "2",
+    "soil_class": "4",
+    "soil_type_pri": "7",
+    "soil_type_sec": "2",
+    "extent_hectares": "0",
+    "extent_ares": "2",
+    "total_tax": "0.08",
+    "patta_number": "614",
+    "poramboke": "-",
+    "assessed": "No",
+    "cultivable": "No",
+    "raw_fields": {
+      "Part Ind": "-",
+      "Govt Pri Code": "2",
+      "Land Type": "Rayathuvari / ரயத்துவாரி",
+      "Irr Source": "-",
+      "Tax Rate": "-",
+      "Soil Typ Pri": "7",
+      "Soil Typ Sec": "2",
+      "Soil Class": "4",
+      "Tax Hect": "4",
+      "Ext Hect": "0",
+      "Ext Ares": "2",
+      "Tot Tax": "0.08",
+      "Patta No": "614",
+      "Poramboke": "-",
+      "Remarks": "-",
+      "Remarks1": "-",
+      "Form8No": "-",
+      "Form6No": "-",
+      "Assessed": "No",
+      "Cultivable": "No",
+      "Dept Name": "-",
+      "Land Type Eng": "Dry",
+      "Land Type Tamil": "புஞ்சை"
+    }
+  },
+  "guideline_value": {
+    "land_type": "Dry Maanavari Lands Type - III",
+    "metric_rate": "₹55,00,000",
+    "guideline_amount": "₹55,00,000"
+  },
+  "coordinates": {
+    "latitude": 12.801283,
+    "longitude": 79.810304,
+    "google_maps_url": "https://www.google.com/maps?q=12.801283,79.810304",
+    "vertices": [
+      {
+        "vertex_number": 1,
+        "latitude": 12.801381,
+        "longitude": 79.810303
+      },
+      {
+        "vertex_number": 2,
+        "latitude": 12.80133,
+        "longitude": 79.810386
+      },
+      {
+        "vertex_number": 3,
+        "latitude": 12.801184,
+        "longitude": 79.8103
+      },
+      {
+        "vertex_number": 4,
+        "latitude": 12.801234,
+        "longitude": 79.810222
+      }
+    ]
+  },
+  "document_status": {
+    "patta_available": true,
+    "patta_rendered_pdf": null,
+    "fmb_available": true,
+    "fmb_rendered_pdf": null,
+    "fmb_screenshot": null,
+    "ec_available": false,
+    "ec_rendered_pdf": null
+  },
+  "raw_sections": {
+    "Search": "District: Kancheepuram\nTaluk: Walajabad\nVillage: Walajabad\nSurvey number: 217\nSubdivision: 1B2",
+    "Owner information": "×\nOwnership Details\nLand Details\nPatta View\n#\tOwner\tRelative\tRelation\n1\tராமலிங்கம்\tநாகப்பன்\tமகன்\n2\tநடராஜன்\tநாகப்பன்\tமகன்\n3\tதேவராஜன்\tநாகப்பன்\tமகன்\n#\tOwner\tRelative\tRelation\n1\tராமலிங்கம்\tநாகப்பன்\tமகன்\n2\tநடராஜன்\tநாகப்பன்\tமகன்\n3\tதேவராஜன்\tநாகப்பன்\tமகன்",
+    "Land information": "×\nOwnership Details\nLand Details\nPatta View\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\t-\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t2\nSoil Class\t4\nTax Hect\t4\nExt Hect\t0\nExt Ares\t2\nTot Tax\t0.08\nPatta No\t614\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t-\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tDry\nLand Type Tamil\tபுஞ்சை\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\t-\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t2\nSoil Class\t4\nTax Hect\t4\nExt Hect\t0\nExt Ares\t2\nTot Tax\t0.08\nPatta No\t614\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t-\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tDry\nLand Type Tamil\tபுஞ்சை",
+    "Patta view": "×\nOwnership Details\nLand Details\nPatta View\nPatta Document\n⛶\nPatta Document\n⛶\nFullscreen opened: True",
+    "FMB information": "FMB panel opened, but it contained no text data.\nSketch button: False",
+    "Property vertices": "Vertex Number Latitude Longitude\n1 12.801381 79.810303\n2 12.801330 79.810386\n3 12.801184 79.810300\n4 12.801234 79.810222\n\nActual pinned latitude/longitude:\n12.801283, 79.810304",
+    "Guideline value": "Guide Line Value from Registration Department\n×\nLand Type:\nDry Maanavari Lands Type - III\nClassification of Land Type:\nDry-Manavari\nMetric Rate:\n₹55,00,000\nPrice per Hectare:\n₹55,00,000\nSpecific guideline block:\nMetric Rate:\n₹55,00,000\nGuideline amount:\n₹55,00,000",
+    "EC": "EC panel opened."
+  },
+  "is_cached_sample": false,
+  "message": "Live TNGIS revenue records successfully scraped and structured."
+}

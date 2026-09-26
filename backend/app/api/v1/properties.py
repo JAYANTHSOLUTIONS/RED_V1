@@ -4,12 +4,16 @@ All endpoints require authentication and consultant authorization.
 Exposes full property CRUD, lifecycle status actions, and image metadata management.
 """
 from typing import List, Optional
+import hashlib
+import os
+from pathlib import Path
 import uuid
 
-from fastapi import APIRouter, Depends, Header, Request, status
+from fastapi import APIRouter, Depends, File, Form, Header, Request, UploadFile, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.deps import get_db, get_ip_address, get_request_id, require_roles
+from app.core.exceptions import ValidationAppError
 from app.core.idempotency import IdempotencyService
 from app.models.user import User
 from app.schemas.common import SuccessEnvelope, success_envelope
@@ -269,8 +273,81 @@ async def mark_rented(
 
 
 # ---------------------------------------------------------------------------
-# Image Metadata Endpoints
+# Image Metadata & File Upload Endpoints
 # ---------------------------------------------------------------------------
+
+ALLOWED_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+
+@router.post(
+    "/{property_id}/images/upload",
+    response_model=SuccessEnvelope[PrivatePropertyImageResponse],
+    status_code=status.HTTP_201_CREATED,
+    summary="Upload image file directly for a property gallery",
+)
+async def upload_property_image(
+    property_id: uuid.UUID,
+    request: Request,
+    file: UploadFile = File(..., description="Image file (.jpg, .jpeg, .png, .webp)"),
+    is_primary: bool = Form(False),
+    display_order: int = Form(0),
+    current_user: User = Depends(require_roles("CONSULTANT")),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Accept multipart image file upload, save to storage, and add property image."""
+    filename = file.filename or "photo.jpg"
+    ext = Path(filename).suffix.lower()
+    if ext not in ALLOWED_IMAGE_EXTENSIONS:
+        raise ValidationAppError(f"Unsupported image extension '{ext}'. Allowed: {sorted(ALLOWED_IMAGE_EXTENSIONS)}")
+
+    file_bytes = await file.read()
+    if len(file_bytes) == 0:
+        raise ValidationAppError("Uploaded file is empty.")
+    if len(file_bytes) > 15 * 1024 * 1024:
+        raise ValidationAppError("Image file size exceeds maximum 15MB limit.")
+
+    # Validate image magic bytes
+    if ext in {".jpg", ".jpeg"} and not file_bytes.startswith(b"\xff\xd8\xff"):
+        raise ValidationAppError("Corrupted or invalid JPEG image header.")
+    elif ext == ".png" and not file_bytes.startswith(b"\x89PNG\r\n\x1a\n"):
+        raise ValidationAppError("Corrupted or invalid PNG image header.")
+    elif ext == ".webp" and (len(file_bytes) < 12 or file_bytes[:4] != b"RIFF" or file_bytes[8:12] != b"WEBP"):
+        raise ValidationAppError("Corrupted or invalid WEBP image header.")
+
+    checksum = hashlib.sha256(file_bytes).hexdigest()
+    safe_name = f"{uuid.uuid4().hex[:12]}_{''.join(c for c in filename if c.isalnum() or c in '._-')}"
+    target_dir = Path("storage/properties") / str(property_id)
+    target_dir.mkdir(parents=True, exist_ok=True)
+    file_path = target_dir / safe_name
+
+    with open(file_path, "wb") as f:
+        f.write(file_bytes)
+
+    storage_key = f"/storage/properties/{property_id}/{safe_name}"
+    mime_type = file.content_type or ("image/png" if ext == ".png" else "image/webp" if ext == ".webp" else "image/jpeg")
+
+    payload = PropertyImageCreate(
+        storage_key=storage_key,
+        original_filename=filename,
+        mime_type=mime_type,
+        file_size=len(file_bytes),
+        checksum=checksum,
+        display_order=display_order,
+        is_primary=is_primary,
+    )
+
+    image = await property_service.add_image(
+        session=db,
+        property_id=property_id,
+        data=payload,
+        actor_id=current_user.id,
+        ip_address=get_ip_address(request),
+        correlation_id=get_request_id(request),
+    )
+    return success_envelope(
+        data=PrivatePropertyImageResponse.model_validate(image).model_dump(mode="json"),
+        message="Property photo uploaded and added successfully.",
+    )
+
 
 @router.post(
     "/{property_id}/images",

@@ -220,6 +220,11 @@ def create_app() -> FastAPI:
     app.add_api_route("/health", liveness, methods=["GET"], tags=["health"])
     app.add_api_route("/ready", readiness, methods=["GET"], tags=["health"])
 
+    import os
+    from fastapi.staticfiles import StaticFiles
+    os.makedirs("storage/properties", exist_ok=True)
+    app.mount("/storage/properties", StaticFiles(directory="storage/properties"), name="property_images")
+
     # Wrap with custom exception handling ASGI middleware
     app = ExceptionHandlingASGI(app)  # type: ignore
     

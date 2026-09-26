@@ -1,0 +1,9 @@
+{
+  "job_id": "live_browser_demo",
+  "status": "completed",
+  "current_step": 5,
+  "message": "Search completed: Nil Encumbrance (Form 16) — No Documents registered during the Search Period.",
+  "timestamp": 1788969043.428694,
+  "is_nil_encumbrance": true,
+  "surveys_count": 1
+}

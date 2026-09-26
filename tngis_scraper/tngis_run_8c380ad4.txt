@@ -1,0 +1,165 @@
+
+==================================================
+Search
+==================================================
+District: Kancheepuram
+Taluk: Walajabad
+Village: Uthukadu-B
+Survey number: 370
+Subdivision: 4
+
+
+==================================================
+Owner information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+#	Owner	Relative	Relation
+1	துரை	கொள்ளாபுர	மகன்
+#	Owner	Relative	Relation
+1	துரை	கொள்ளாபுர	மகன்
+
+==================================================
+Land information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	A
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	3
+Soil Class	7
+Tax Hect	8.65
+Ext Hect	0
+Ext Ares	72.5
+Tot Tax	6.3
+Patta No	582
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	JP/668
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Wet
+Land Type Tamil	நஞ்சை
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	A
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	3
+Soil Class	7
+Tax Hect	8.65
+Ext Hect	0
+Ext Ares	72.5
+Tot Tax	6.3
+Patta No	582
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	JP/668
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Wet
+Land Type Tamil	நஞ்சை
+
+==================================================
+Patta view
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Patta Document
+⛶
+Patta Document
+⛶
+Fullscreen opened: True
+
+
+==================================================
+FMB information
+==================================================
+FMB panel opened, but it contained no text data.
+Sketch button: False
+
+==================================================
+Property vertices
+==================================================
+Vertex Information (33 Vertices)
+×
+Vertex Number Latitude Longitude
+1 12.818146 79.818213
+2 12.818280 79.818255
+3 12.818344 79.818217
+4 12.818394 79.818030
+5 12.818511 79.818009
+6 12.818497 79.818114
+7 12.818751 79.818291
+8 12.818733 79.818406
+9 12.818772 79.818459
+10 12.818751 79.818582
+11 12.818639 79.818669
+12 12.818465 79.818691
+13 12.818297 79.818644
+14 12.818222 79.818887
+15 12.818166 79.818949
+16 12.818013 79.818857
+17 12.817780 79.818839
+18 12.817701 79.818963
+19 12.817454 79.818896
+20 12.817378 79.818842
+21 12.817400 79.818786
+22 12.817345 79.818743
+23 12.817397 79.818748
+24 12.817470 79.818660
+25 12.817671 79.818753
+26 12.817802 79.818790
+27 12.817892 79.818638
+28 12.817962 79.818344
+29 12.817871 79.818251
+30 12.817901 79.818136
+31 12.818038 79.818180
+32 12.817989 79.818343
+33 12.818076 79.818440
+
+Actual pinned latitude/longitude:
+12.818058, 79.818486
+
+==================================================
+Guideline value
+==================================================
+Guide Line Value from Registration Department
+×
+Land Type:
+Wet Lake Irrigation Single Crop Type - II
+Classification of Land Type:
+Wet-Lake-Irrig-1
+Metric Rate:
+₹30,00,100
+Price per Hectare:
+₹30,00,100
+Specific guideline block:
+Metric Rate:
+₹30,00,100
+Guideline amount:
+₹30,00,100
+
+==================================================
+EC
+==================================================
+EC panel opened.

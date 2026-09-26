@@ -1,0 +1,67 @@
+[TNGIS] Initializing browser (headless=True)...
+[TNGIS] Navigating to https://tngis.tn.gov.in/apps/gi_viewer/map-viewer/index.html for Survey 217/1B2 in Walajabad, Walajabad...
+OCR CAPTCHA text (attempt 1/5): Uanbxr
+Traceback (most recent call last):
+  File "C:\Users\w\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\w\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\w\Documents\GitHub\RED\tngis_scraper\tngis_scraper.py", line 506, in <module>
+    select_option('//*[@id="sub-division-dropdown"]', TARGET_SUB_DIV)
+  File "C:\Users\w\Documents\GitHub\RED\tngis_scraper\tngis_scraper.py", line 464, in select_option
+    matching_option = next(
+                      ^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\tngis_scraper\tngis_scraper.py", line 473, in <genexpr>
+    option.get_attribute("value") or "",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 213, in get_attribute
+    attribute_value = self.parent.execute_script(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 613, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 500, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 407, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 431, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\http\client.py", line 1432, in getresponse
+    self.close()
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\urllib3\connection.py", line 375, in close
+    def close(self) -> None:
+
+KeyboardInterrupt

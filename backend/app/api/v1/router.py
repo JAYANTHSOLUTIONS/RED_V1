@@ -11,6 +11,7 @@ from app.api.v1 import (
     auth,
     clients,
     documents,
+    fmb,
     follow_ups,
     health,
     leads,
@@ -19,6 +20,8 @@ from app.api.v1 import (
     public_properties,
     requirements,
     site_visits,
+    tnec,
+    tngis,
     verification,
 )
 
@@ -32,8 +35,12 @@ api_router.include_router(clients.router)
 api_router.include_router(leads.router)
 api_router.include_router(requirements.router)
 api_router.include_router(documents.router)
+api_router.include_router(fmb.router)
 api_router.include_router(verification.router)
+api_router.include_router(tngis.router)
+api_router.include_router(tnec.router)
 api_router.include_router(site_visits.router)
 api_router.include_router(follow_ups.router)
 api_router.include_router(notifications.router)
+
 

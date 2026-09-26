@@ -1,0 +1,111 @@
+{
+  "search": {
+    "district": "Kancheepuram",
+    "taluk": "Sriperumbudur",
+    "village": "Ekkanapuram",
+    "survey_number": "217",
+    "subdivision": "1"
+  },
+  "owners": [
+    {
+      "index": 1,
+      "owner": "முருகன்",
+      "relative": "பொம்பாய்",
+      "relation": "மகன்"
+    }
+  ],
+  "land_details": {
+    "land_type": "Rayathuvari / ரயத்துவாரி",
+    "land_type_eng": "Wet",
+    "land_type_tamil": "நஞ்சை",
+    "govt_pri_code": "2",
+    "soil_class": "6",
+    "soil_type_pri": "4",
+    "soil_type_sec": "3",
+    "extent_hectares": "0",
+    "extent_ares": "1.5",
+    "total_tax": "0.16",
+    "patta_number": "931",
+    "poramboke": "-",
+    "assessed": "No",
+    "cultivable": "No",
+    "raw_fields": {
+      "Part Ind": "-",
+      "Govt Pri Code": "2",
+      "Land Type": "Rayathuvari / ரயத்துவாரி",
+      "Irr Source": "B",
+      "Tax Rate": "1",
+      "Soil Typ Pri": "4",
+      "Soil Typ Sec": "3",
+      "Soil Class": "6",
+      "Tax Hect": "9.88",
+      "Ext Hect": "0",
+      "Ext Ares": "1.5",
+      "Tot Tax": "0.16",
+      "Patta No": "931",
+      "Poramboke": "-",
+      "Remarks": "-",
+      "Remarks1": "-",
+      "Form8No": "-",
+      "Form6No": "2020/0103/03/186706",
+      "Assessed": "No",
+      "Cultivable": "No",
+      "Dept Name": "-",
+      "Land Type Eng": "Wet",
+      "Land Type Tamil": "நஞ்சை"
+    }
+  },
+  "guideline_value": {
+    "land_type": "Wet Special Type - III",
+    "metric_rate": "₹17,00,000",
+    "guideline_amount": "₹17,00,000"
+  },
+  "coordinates": {
+    "latitude": 12.965497,
+    "longitude": 79.774562,
+    "google_maps_url": "https://www.google.com/maps?q=12.965497,79.774562",
+    "vertices": [
+      {
+        "vertex_number": 1,
+        "latitude": 12.965628,
+        "longitude": 79.77458
+      },
+      {
+        "vertex_number": 2,
+        "latitude": 12.96537,
+        "longitude": 79.774596
+      },
+      {
+        "vertex_number": 3,
+        "latitude": 12.965366,
+        "longitude": 79.774544
+      },
+      {
+        "vertex_number": 4,
+        "latitude": 12.965621,
+        "longitude": 79.774528
+      }
+    ]
+  },
+  "document_status": {
+    "patta_available": true,
+    "patta_rendered_pdf": null,
+    "fmb_available": true,
+    "fmb_rendered_pdf": null,
+    "fmb_screenshot": null,
+    "ec_available": false,
+    "ec_rendered_pdf": null
+  },
+  "raw_sections": {
+    "Search": "District: Kancheepuram\nTaluk: Sriperumbudur\nVillage: Ekkanapuram\nSurvey number: 217\nSubdivision: 1",
+    "Owner information": "×\nOwnership Details\nLand Details\nPatta View\n#\tOwner\tRelative\tRelation\n1\tமுருகன்\tபொம்பாய்\tமகன்\n#\tOwner\tRelative\tRelation\n1\tமுருகன்\tபொம்பாய்\tமகன்",
+    "Land information": "×\nOwnership Details\nLand Details\nPatta View\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tB\nTax Rate\t1\nSoil Typ Pri\t4\nSoil Typ Sec\t3\nSoil Class\t6\nTax Hect\t9.88\nExt Hect\t0\nExt Ares\t1.5\nTot Tax\t0.16\nPatta No\t931\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t2020/0103/03/186706\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tB\nTax Rate\t1\nSoil Typ Pri\t4\nSoil Typ Sec\t3\nSoil Class\t6\nTax Hect\t9.88\nExt Hect\t0\nExt Ares\t1.5\nTot Tax\t0.16\nPatta No\t931\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\t2020/0103/03/186706\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை",
+    "Patta view": "×\nOwnership Details\nLand Details\nPatta View\nPatta Document\n⛶\nPatta Document\n⛶\nFullscreen opened: True",
+    "FMB information": "FMB panel opened, but it contained no text data.\nSketch button: False",
+    "Property vertices": "Vertex Information (4 Vertices)\n×\nVertex Number Latitude Longitude\n1 12.965628 79.774580\n2 12.965370 79.774596\n3 12.965366 79.774544\n4 12.965621 79.774528\n\nActual pinned latitude/longitude:\n12.965497, 79.774562",
+    "Guideline value": "Guide Line Value from Registration Department\n×\nLand Type:\nWet Special Type - III\nClassification of Land Type:\nWet-Spl\nMetric Rate:\n₹17,00,000\nPrice per Hectare:\n₹17,00,000\nSpecific guideline block:\nMetric Rate:\n₹17,00,000\nGuideline amount:\n₹17,00,000",
+    "EC": "EC panel opened."
+  },
+  "is_cached_sample": false,
+  "message": "Live TNGIS revenue records successfully scraped and structured."
+}

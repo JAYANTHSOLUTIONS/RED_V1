@@ -24,12 +24,17 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-# Storage
-backend/storage/documents/*
-!backend/storage/documents/.gitkeep
+# Database & Temp Scraper Artifacts
+backend/*.db
+backend/captcha_*
+backend/results_from_1975.png
+backend/scratch_test_1975.py
+backend/storage/*
+!backend/storage/.gitkeep
 
 # OS / Editors
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+

@@ -1,0 +1,69 @@
+[TNGIS] Initializing browser (headless=False)...
+[TNGIS] Navigating to https://tngis.tn.gov.in/apps/gi_viewer/map-viewer/index.html for Survey 217/1B1 in Walajabad, Walajabad...
+OCR CAPTCHA text (attempt 1/5): VrmUHu
+Login did not complete; retrying with a fresh CAPTCHA...
+[TNGIS Error] Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=152.0.7977.82); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff69900e035+5745]
+	chromedriver!(No symbol) [0x7ff698f36a90]
+	chromedriver!(No symbol) [0x7ff698d65d7d]
+	chromedriver!(No symbol) [0x7ff698d51632]
+	chromedriver!(No symbol) [0x7ff698d773ac]
+	chromedriver!(No symbol) [0x7ff698df0bd0]
+	chromedriver!(No symbol) [0x7ff698e0dddd]
+	chromedriver!(No symbol) [0x7ff698db2e4b]
+	chromedriver!(No symbol) [0x7ff698db3d83]
+	chromedriver!GetHandleVerifier [0x7ff699422f8b+41a69b]
+	chromedriver!GetHandleVerifier [0x7ff699450132+447842]
+	chromedriver!GetHandleVerifier [0x7ff699443e7e+43b58e]
+	chromedriver!GetHandleVerifier [0x7ff699103f5e+fb66e]
+	chromedriver!(No symbol) [0x7ff698f4419c]
+	chromedriver!(No symbol) [0x7ff698f3fdd4]
+	chromedriver!(No symbol) [0x7ff698f3ff64]
+	chromedriver!(No symbol) [0x7ff698f2a91c]
+	KERNEL32!BaseThreadInitThunk [0x7fff6fffccb7+17]
+	ntdll!RtlUserThreadStart [0x7fff711acaec+2c]
+
+Traceback (most recent call last):
+  File "C:\Users\w\Documents\GitHub\RED\tngis_scraper\tngis_scraper.py", line 341, in <module>
+    captcha_input = wait.until(
+                    ^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 188, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 910, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 503, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\w\Documents\GitHub\RED\backend\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=152.0.7977.82); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff69900e035+5745]
+	chromedriver!(No symbol) [0x7ff698f36a90]
+	chromedriver!(No symbol) [0x7ff698d65d7d]
+	chromedriver!(No symbol) [0x7ff698d51632]
+	chromedriver!(No symbol) [0x7ff698d773ac]
+	chromedriver!(No symbol) [0x7ff698df0bd0]
+	chromedriver!(No symbol) [0x7ff698e0dddd]
+	chromedriver!(No symbol) [0x7ff698db2e4b]
+	chromedriver!(No symbol) [0x7ff698db3d83]
+	chromedriver!GetHandleVerifier [0x7ff699422f8b+41a69b]
+	chromedriver!GetHandleVerifier [0x7ff699450132+447842]
+	chromedriver!GetHandleVerifier [0x7ff699443e7e+43b58e]
+	chromedriver!GetHandleVerifier [0x7ff699103f5e+fb66e]
+	chromedriver!(No symbol) [0x7ff698f4419c]
+	chromedriver!(No symbol) [0x7ff698f3fdd4]
+	chromedriver!(No symbol) [0x7ff698f3ff64]
+	chromedriver!(No symbol) [0x7ff698f2a91c]
+	KERNEL32!BaseThreadInitThunk [0x7fff6fffccb7+17]
+	ntdll!RtlUserThreadStart [0x7fff711acaec+2c]
+

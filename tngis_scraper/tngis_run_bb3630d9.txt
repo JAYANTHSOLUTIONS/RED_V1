@@ -1,0 +1,137 @@
+
+==================================================
+Search
+==================================================
+District: Kancheepuram
+Taluk: Kundrathur
+Village: Madapakkam
+Survey number: 99
+Subdivision: 8
+
+
+==================================================
+Owner information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+#	Owner	Relative	Relation
+1	குருசாமி நாயுடு	கேசவல் நாயுடு	மகன்
+#	Owner	Relative	Relation
+1	குருசாமி நாயுடு	கேசவல் நாயுடு	மகன்
+
+==================================================
+Land information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	A
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	1
+Soil Class	5
+Tax Hect	11.42
+Ext Hect	0
+Ext Ares	21
+Tot Tax	2.42
+Patta No	85
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Wet
+Land Type Tamil	நஞ்சை
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	A
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	1
+Soil Class	5
+Tax Hect	11.42
+Ext Hect	0
+Ext Ares	21
+Tot Tax	2.42
+Patta No	85
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Wet
+Land Type Tamil	நஞ்சை
+
+==================================================
+Patta view
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Patta Document
+⛶
+Patta Document
+⛶
+Fullscreen opened: True
+
+
+==================================================
+FMB information
+==================================================
+FMB panel opened, but it contained no text data.
+Sketch button: True
+
+==================================================
+Property vertices
+==================================================
+Vertex Number Latitude Longitude
+1 12.853047 80.047874
+2 12.853411 80.048004
+3 12.853361 80.048144
+4 12.853345 80.048202
+5 12.853261 80.048410
+6 12.853073 80.048364
+7 12.852982 80.048363
+
+Actual pinned latitude/longitude:
+12.853196, 80.048142
+
+==================================================
+Guideline value
+==================================================
+Guide Line Value from Registration Department
+×
+Land Type:
+Residential Special Type - I
+Classification of Land Type:
+Natham-Res-Spl
+Metric Rate:
+₹800
+Price per Hectare:
+₹3,48,48,000
+Specific guideline block:
+Metric Rate:
+₹800
+Guideline amount:
+₹800
+
+==================================================
+EC
+==================================================
+EC panel opened.

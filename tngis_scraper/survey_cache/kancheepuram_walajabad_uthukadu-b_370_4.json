@@ -1,0 +1,256 @@
+{
+  "search": {
+    "district": "Kancheepuram",
+    "taluk": "Walajabad",
+    "village": "Uthukadu-B",
+    "survey_number": "370",
+    "subdivision": "4"
+  },
+  "owners": [
+    {
+      "index": 1,
+      "owner": "துரை",
+      "relative": "கொள்ளாபுர",
+      "relation": "மகன்"
+    }
+  ],
+  "land_details": {
+    "land_type": "Rayathuvari / ரயத்துவாரி",
+    "land_type_eng": "Wet",
+    "land_type_tamil": "நஞ்சை",
+    "govt_pri_code": "2",
+    "soil_class": "7",
+    "soil_type_pri": "7",
+    "soil_type_sec": "3",
+    "extent_hectares": "0",
+    "extent_ares": "72.5",
+    "total_tax": "6.3",
+    "patta_number": "582",
+    "poramboke": "-",
+    "assessed": "No",
+    "cultivable": "No",
+    "raw_fields": {
+      "Part Ind": "-",
+      "Govt Pri Code": "2",
+      "Land Type": "Rayathuvari / ரயத்துவாரி",
+      "Irr Source": "A",
+      "Tax Rate": "-",
+      "Soil Typ Pri": "7",
+      "Soil Typ Sec": "3",
+      "Soil Class": "7",
+      "Tax Hect": "8.65",
+      "Ext Hect": "0",
+      "Ext Ares": "72.5",
+      "Tot Tax": "6.3",
+      "Patta No": "582",
+      "Poramboke": "-",
+      "Remarks": "-",
+      "Remarks1": "-",
+      "Form8No": "-",
+      "Form6No": "JP/668",
+      "Assessed": "No",
+      "Cultivable": "No",
+      "Dept Name": "-",
+      "Land Type Eng": "Wet",
+      "Land Type Tamil": "நஞ்சை"
+    }
+  },
+  "guideline_value": {
+    "land_type": "Wet Lake Irrigation Single Crop Type - II",
+    "metric_rate": "₹30,00,100",
+    "guideline_amount": "₹30,00,100"
+  },
+  "coordinates": {
+    "latitude": 12.818058,
+    "longitude": 79.818486,
+    "google_maps_url": "https://www.google.com/maps?q=12.818058,79.818486",
+    "vertices": [
+      {
+        "vertex_number": 1,
+        "latitude": 12.818146,
+        "longitude": 79.818213
+      },
+      {
+        "vertex_number": 2,
+        "latitude": 12.81828,
+        "longitude": 79.818255
+      },
+      {
+        "vertex_number": 3,
+        "latitude": 12.818344,
+        "longitude": 79.818217
+      },
+      {
+        "vertex_number": 4,
+        "latitude": 12.818394,
+        "longitude": 79.81803
+      },
+      {
+        "vertex_number": 5,
+        "latitude": 12.818511,
+        "longitude": 79.818009
+      },
+      {
+        "vertex_number": 6,
+        "latitude": 12.818497,
+        "longitude": 79.818114
+      },
+      {
+        "vertex_number": 7,
+        "latitude": 12.818751,
+        "longitude": 79.818291
+      },
+      {
+        "vertex_number": 8,
+        "latitude": 12.818733,
+        "longitude": 79.818406
+      },
+      {
+        "vertex_number": 9,
+        "latitude": 12.818772,
+        "longitude": 79.818459
+      },
+      {
+        "vertex_number": 10,
+        "latitude": 12.818751,
+        "longitude": 79.818582
+      },
+      {
+        "vertex_number": 11,
+        "latitude": 12.818639,
+        "longitude": 79.818669
+      },
+      {
+        "vertex_number": 12,
+        "latitude": 12.818465,
+        "longitude": 79.818691
+      },
+      {
+        "vertex_number": 13,
+        "latitude": 12.818297,
+        "longitude": 79.818644
+      },
+      {
+        "vertex_number": 14,
+        "latitude": 12.818222,
+        "longitude": 79.818887
+      },
+      {
+        "vertex_number": 15,
+        "latitude": 12.818166,
+        "longitude": 79.818949
+      },
+      {
+        "vertex_number": 16,
+        "latitude": 12.818013,
+        "longitude": 79.818857
+      },
+      {
+        "vertex_number": 17,
+        "latitude": 12.81778,
+        "longitude": 79.818839
+      },
+      {
+        "vertex_number": 18,
+        "latitude": 12.817701,
+        "longitude": 79.818963
+      },
+      {
+        "vertex_number": 19,
+        "latitude": 12.817454,
+        "longitude": 79.818896
+      },
+      {
+        "vertex_number": 20,
+        "latitude": 12.817378,
+        "longitude": 79.818842
+      },
+      {
+        "vertex_number": 21,
+        "latitude": 12.8174,
+        "longitude": 79.818786
+      },
+      {
+        "vertex_number": 22,
+        "latitude": 12.817345,
+        "longitude": 79.818743
+      },
+      {
+        "vertex_number": 23,
+        "latitude": 12.817397,
+        "longitude": 79.818748
+      },
+      {
+        "vertex_number": 24,
+        "latitude": 12.81747,
+        "longitude": 79.81866
+      },
+      {
+        "vertex_number": 25,
+        "latitude": 12.817671,
+        "longitude": 79.818753
+      },
+      {
+        "vertex_number": 26,
+        "latitude": 12.817802,
+        "longitude": 79.81879
+      },
+      {
+        "vertex_number": 27,
+        "latitude": 12.817892,
+        "longitude": 79.818638
+      },
+      {
+        "vertex_number": 28,
+        "latitude": 12.817962,
+        "longitude": 79.818344
+      },
+      {
+        "vertex_number": 29,
+        "latitude": 12.817871,
+        "longitude": 79.818251
+      },
+      {
+        "vertex_number": 30,
+        "latitude": 12.817901,
+        "longitude": 79.818136
+      },
+      {
+        "vertex_number": 31,
+        "latitude": 12.818038,
+        "longitude": 79.81818
+      },
+      {
+        "vertex_number": 32,
+        "latitude": 12.817989,
+        "longitude": 79.818343
+      },
+      {
+        "vertex_number": 33,
+        "latitude": 12.818076,
+        "longitude": 79.81844
+      }
+    ]
+  },
+  "document_status": {
+    "patta_available": true,
+    "patta_rendered_pdf": null,
+    "fmb_available": true,
+    "fmb_rendered_pdf": null,
+    "fmb_screenshot": null,
+    "ec_available": false,
+    "ec_rendered_pdf": null
+  },
+  "raw_sections": {
+    "Search": "District: Kancheepuram\nTaluk: Walajabad\nVillage: Uthukadu-B\nSurvey number: 370\nSubdivision: 4",
+    "Owner information": "×\nOwnership Details\nLand Details\nPatta View\n#\tOwner\tRelative\tRelation\n1\tதுரை\tகொள்ளாபுர\tமகன்\n#\tOwner\tRelative\tRelation\n1\tதுரை\tகொள்ளாபுர\tமகன்",
+    "Land information": "×\nOwnership Details\nLand Details\nPatta View\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tA\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t3\nSoil Class\t7\nTax Hect\t8.65\nExt Hect\t0\nExt Ares\t72.5\nTot Tax\t6.3\nPatta No\t582\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\tJP/668\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\tA\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t3\nSoil Class\t7\nTax Hect\t8.65\nExt Hect\t0\nExt Ares\t72.5\nTot Tax\t6.3\nPatta No\t582\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t-\nForm6No\tJP/668\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tWet\nLand Type Tamil\tநஞ்சை",
+    "Patta view": "×\nOwnership Details\nLand Details\nPatta View\nPatta Document\n⛶\nPatta Document\n⛶\nFullscreen opened: True",
+    "FMB information": "FMB panel opened, but it contained no text data.\nSketch button: False",
+    "Property vertices": "Vertex Information (33 Vertices)\n×\nVertex Number Latitude Longitude\n1 12.818146 79.818213\n2 12.818280 79.818255\n3 12.818344 79.818217\n4 12.818394 79.818030\n5 12.818511 79.818009\n6 12.818497 79.818114\n7 12.818751 79.818291\n8 12.818733 79.818406\n9 12.818772 79.818459\n10 12.818751 79.818582\n11 12.818639 79.818669\n12 12.818465 79.818691\n13 12.818297 79.818644\n14 12.818222 79.818887\n15 12.818166 79.818949\n16 12.818013 79.818857\n17 12.817780 79.818839\n18 12.817701 79.818963\n19 12.817454 79.818896\n20 12.817378 79.818842\n21 12.817400 79.818786\n22 12.817345 79.818743\n23 12.817397 79.818748\n24 12.817470 79.818660\n25 12.817671 79.818753\n26 12.817802 79.818790\n27 12.817892 79.818638\n28 12.817962 79.818344\n29 12.817871 79.818251\n30 12.817901 79.818136\n31 12.818038 79.818180\n32 12.817989 79.818343\n33 12.818076 79.818440\n\nActual pinned latitude/longitude:\n12.818058, 79.818486",
+    "Guideline value": "Guide Line Value from Registration Department\n×\nLand Type:\nWet Lake Irrigation Single Crop Type - II\nClassification of Land Type:\nWet-Lake-Irrig-1\nMetric Rate:\n₹30,00,100\nPrice per Hectare:\n₹30,00,100\nSpecific guideline block:\nMetric Rate:\n₹30,00,100\nGuideline amount:\n₹30,00,100",
+    "EC": "EC panel opened."
+  },
+  "is_cached_sample": false,
+  "message": "Live TNGIS revenue records successfully scraped and structured."
+}

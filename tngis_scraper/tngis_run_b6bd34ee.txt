@@ -1,0 +1,127 @@
+
+==================================================
+Search
+==================================================
+District: Kancheepuram
+Taluk: Walajabad
+Village: Walajabad
+Survey number: 217
+Subdivision: 1B1
+
+
+==================================================
+Owner information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+#	Owner	Relative	Relation
+1	அம்பளவாணர் அறப்பொறுப்பு ஆயம் செயளர்	.....	...
+#	Owner	Relative	Relation
+1	அம்பளவாணர் அறப்பொறுப்பு ஆயம் செயளர்	.....	...
+
+==================================================
+Land information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	-
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	2
+Soil Class	4
+Tax Hect	4
+Ext Hect	0
+Ext Ares	16
+Tot Tax	0.69
+Patta No	523
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Dry
+Land Type Tamil	புஞ்சை
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	-
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	2
+Soil Class	4
+Tax Hect	4
+Ext Hect	0
+Ext Ares	16
+Tot Tax	0.69
+Patta No	523
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Dry
+Land Type Tamil	புஞ்சை
+
+==================================================
+Patta view
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Patta Document
+⛶
+Patta Document
+⛶
+Fullscreen opened: True
+
+
+==================================================
+FMB information
+==================================================
+FMB panel opened, but it contained no text data.
+Sketch button: True
+
+==================================================
+Property vertices
+==================================================
+Vertex Information (4 Vertices)
+×
+Vertex Number Latitude Longitude
+1 12.801566 79.809651
+
+Actual pinned latitude/longitude:
+12.801451, 79.810015
+
+==================================================
+Guideline value
+==================================================
+Guide Line Value from Registration Department
+×
+Land Type:
+Dry Maanavari Lands Type - III
+Specific guideline block:
+Metric Rate:
+₹55,00,000
+Guideline amount:
+₹55,00,000
+
+==================================================
+EC
+==================================================
+EC panel opened.

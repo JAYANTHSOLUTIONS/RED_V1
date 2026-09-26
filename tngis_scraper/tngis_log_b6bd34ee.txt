@@ -1,0 +1,15 @@
+[TNGIS] Initializing browser (headless=False)...
+[TNGIS] Navigating to https://tngis.tn.gov.in/apps/gi_viewer/map-viewer/index.html for Survey 217/1B1 in Walajabad, Walajabad...
+OCR CAPTCHA text (attempt 1/5): 2yFTtk
+Workflow navigation complete.
+[TNGIS] Waiting for map pin confirmation (watching tngis_continue_b6bd34ee.signal)...
+[TNGIS] Continue signal received! Proceeding with extraction...
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Notice: information panel is still loading after the wait timeout.
+Map details saved to 'C:\Users\w\Documents\GitHub\RED\tngis_scraper\tngis_run_b6bd34ee.txt'.

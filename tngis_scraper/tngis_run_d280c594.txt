@@ -1,0 +1,138 @@
+
+==================================================
+Search
+==================================================
+District: Kancheepuram
+Taluk: Walajabad
+Village: Walajabad
+Survey number: 217
+Subdivision: 1B2
+
+
+==================================================
+Owner information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+#	Owner	Relative	Relation
+1	ராமலிங்கம்	நாகப்பன்	மகன்
+2	நடராஜன்	நாகப்பன்	மகன்
+3	தேவராஜன்	நாகப்பன்	மகன்
+#	Owner	Relative	Relation
+1	ராமலிங்கம்	நாகப்பன்	மகன்
+2	நடராஜன்	நாகப்பன்	மகன்
+3	தேவராஜன்	நாகப்பன்	மகன்
+
+==================================================
+Land information
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	-
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	2
+Soil Class	4
+Tax Hect	4
+Ext Hect	0
+Ext Ares	2
+Tot Tax	0.08
+Patta No	614
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Dry
+Land Type Tamil	புஞ்சை
+Field	Value
+Part Ind	-
+Govt Pri Code	2
+Land Type	Rayathuvari / ரயத்துவாரி
+Irr Source	-
+Tax Rate	-
+Soil Typ Pri	7
+Soil Typ Sec	2
+Soil Class	4
+Tax Hect	4
+Ext Hect	0
+Ext Ares	2
+Tot Tax	0.08
+Patta No	614
+Poramboke	-
+Remarks	-
+Remarks1	-
+Form8No	-
+Form6No	-
+Assessed	No
+Cultivable	No
+Dept Name	-
+Land Type Eng	Dry
+Land Type Tamil	புஞ்சை
+
+==================================================
+Patta view
+==================================================
+×
+Ownership Details
+Land Details
+Patta View
+Patta Document
+⛶
+Patta Document
+⛶
+Fullscreen opened: True
+
+
+==================================================
+FMB information
+==================================================
+FMB panel opened, but it contained no text data.
+Sketch button: False
+
+==================================================
+Property vertices
+==================================================
+Vertex Number Latitude Longitude
+1 12.801381 79.810303
+2 12.801330 79.810386
+3 12.801184 79.810300
+4 12.801234 79.810222
+
+Actual pinned latitude/longitude:
+12.801283, 79.810304
+
+==================================================
+Guideline value
+==================================================
+Guide Line Value from Registration Department
+×
+Land Type:
+Dry Maanavari Lands Type - III
+Classification of Land Type:
+Dry-Manavari
+Metric Rate:
+₹55,00,000
+Price per Hectare:
+₹55,00,000
+Specific guideline block:
+Metric Rate:
+₹55,00,000
+Guideline amount:
+₹55,00,000
+
+==================================================
+EC
+==================================================
+EC panel opened.

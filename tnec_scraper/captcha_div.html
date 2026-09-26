@@ -1,0 +1,17 @@
+<div id="cmnCaptchDivId" class="form-group">
+	<label for="txt_Captcha" id="captchLbl" title="காண்பிக்கப்படும் குறியீட்டைத் தட்டச்சு செய்க">காண்பிக்கப்படும் குறியீட் .. </label>
+	<div>
+		<input class="form-control" type="text" id="txt_Captcha" onkeypress="checkSpecialCharacters(event);" charstobeacptd="" name="txt_Captcha" maxlength="5" onblur="checkCaptcha(this);">
+	</div>
+	<div class="clearfix"></div>
+	<div class="captcha-image">
+		<img src="SimpleCaptcha?1788968046114" id="captcha" alt="Captcha">
+	</div>
+	<div class="captcha-refresh">
+		<a href="" onclick="doImageReload();">
+			<img src="images/refresh3.jpg" id="refresh" alt="Refresh Captcha">
+		</a>
+	</div>
+	<div class="clearfix"></div>
+	<span class="alertmsg" id="incCaptcha"></span>
+</div>

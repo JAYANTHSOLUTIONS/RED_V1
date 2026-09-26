@@ -1,0 +1,117 @@
+{
+  "search": {
+    "district": "Kancheepuram",
+    "taluk": "Walajabad",
+    "village": "Walajabad",
+    "survey_number": "217",
+    "subdivision": "6"
+  },
+  "owners": [
+    {
+      "index": 1,
+      "owner": "மணிக்குமார்",
+      "relative": "லட்சுமணன்",
+      "relation": "மகன்"
+    },
+    {
+      "index": 2,
+      "owner": "அய்யப்பராஜா",
+      "relative": "லட்சுமணன்",
+      "relation": "மகன்"
+    }
+  ],
+  "land_details": {
+    "land_type": "Rayathuvari / ரயத்துவாரி",
+    "land_type_eng": "Dry",
+    "land_type_tamil": "புஞ்சை",
+    "govt_pri_code": "2",
+    "soil_class": "4",
+    "soil_type_pri": "7",
+    "soil_type_sec": "2",
+    "extent_hectares": "0",
+    "extent_ares": "0.92",
+    "total_tax": "0.1",
+    "patta_number": "2961",
+    "poramboke": "-",
+    "assessed": "No",
+    "cultivable": "No",
+    "raw_fields": {
+      "Part Ind": "-",
+      "Govt Pri Code": "2",
+      "Land Type": "Rayathuvari / ரயத்துவாரி",
+      "Irr Source": "-",
+      "Tax Rate": "-",
+      "Soil Typ Pri": "7",
+      "Soil Typ Sec": "2",
+      "Soil Class": "4",
+      "Tax Hect": "4",
+      "Ext Hect": "0",
+      "Ext Ares": "0.92",
+      "Tot Tax": "0.1",
+      "Patta No": "2961",
+      "Poramboke": "-",
+      "Remarks": "-",
+      "Remarks1": "-",
+      "Form8No": "474/1425",
+      "Form6No": "2027/15",
+      "Assessed": "No",
+      "Cultivable": "No",
+      "Dept Name": "-",
+      "Land Type Eng": "Dry",
+      "Land Type Tamil": "புஞ்சை"
+    }
+  },
+  "guideline_value": {
+    "land_type": "",
+    "metric_rate": "",
+    "guideline_amount": "[amount unavailable]"
+  },
+  "coordinates": {
+    "latitude": 12.800846,
+    "longitude": 79.809835,
+    "google_maps_url": "https://www.google.com/maps?q=12.800846,79.809835",
+    "vertices": [
+      {
+        "vertex_number": 1,
+        "latitude": 12.800915,
+        "longitude": 79.809838
+      },
+      {
+        "vertex_number": 2,
+        "latitude": 12.800881,
+        "longitude": 79.809898
+      },
+      {
+        "vertex_number": 3,
+        "latitude": 12.800776,
+        "longitude": 79.809831
+      },
+      {
+        "vertex_number": 4,
+        "latitude": 12.800811,
+        "longitude": 79.809772
+      }
+    ]
+  },
+  "document_status": {
+    "patta_available": true,
+    "patta_rendered_pdf": null,
+    "fmb_available": true,
+    "fmb_rendered_pdf": null,
+    "fmb_screenshot": null,
+    "ec_available": false,
+    "ec_rendered_pdf": null
+  },
+  "raw_sections": {
+    "Search": "District: Kancheepuram\nTaluk: Walajabad\nVillage: Walajabad\nSurvey number: 217\nSubdivision: 6",
+    "Owner information": "×\nOwnership Details\nLand Details\nPatta View\n#\tOwner\tRelative\tRelation\n1\tமணிக்குமார்\tலட்சுமணன்\tமகன்\n2\tஅய்யப்பராஜா\tலட்சுமணன்\tமகன்\n#\tOwner\tRelative\tRelation\n1\tமணிக்குமார்\tலட்சுமணன்\tமகன்\n2\tஅய்யப்பராஜா\tலட்சுமணன்\tமகன்",
+    "Land information": "×\nOwnership Details\nLand Details\nPatta View\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\t-\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t2\nSoil Class\t4\nTax Hect\t4\nExt Hect\t0\nExt Ares\t0.92\nTot Tax\t0.1\nPatta No\t2961\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t474/1425\nForm6No\t2027/15\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tDry\nLand Type Tamil\tபுஞ்சை\nField\tValue\nPart Ind\t-\nGovt Pri Code\t2\nLand Type\tRayathuvari / ரயத்துவாரி\nIrr Source\t-\nTax Rate\t-\nSoil Typ Pri\t7\nSoil Typ Sec\t2\nSoil Class\t4\nTax Hect\t4\nExt Hect\t0\nExt Ares\t0.92\nTot Tax\t0.1\nPatta No\t2961\nPoramboke\t-\nRemarks\t-\nRemarks1\t-\nForm8No\t474/1425\nForm6No\t2027/15\nAssessed\tNo\nCultivable\tNo\nDept Name\t-\nLand Type Eng\tDry\nLand Type Tamil\tபுஞ்சை",
+    "Patta view": "×\nOwnership Details\nLand Details\nPatta View\nPatta Document\n⛶\nPatta Document\n⛶\nFullscreen opened: True",
+    "FMB information": "FMB panel opened, but it contained no text data.\nSketch button: False",
+    "Property vertices": "Vertex Information (4 Vertices)\n×\nVertex Number Latitude Longitude\n1 12.800915 79.809838\n2 12.800881 79.809898\n3 12.800776 79.809831\n4 12.800811 79.809772\n\nActual pinned latitude/longitude:\n12.800846, 79.809835",
+    "Guideline value": "Guideline control opened, but no text data was available.\nSpecific guideline block:\n[block unavailable]\nGuideline amount:\n[amount unavailable]",
+    "EC": "EC panel opened."
+  },
+  "is_cached_sample": true,
+  "message": "TNGIS land and revenue records extracted and structured successfully."
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+
+  --color-forest: #1F3A37;
+  --color-forest-dark: #18302D;
+  --color-forest-8: rgba(31, 58, 55, 0.08);
+  --color-forest-12: rgba(31, 58, 55, 0.12);
+  --color-gold: #B08D57;
+  --color-gold-subtle: #F5EFE6;
+  --color-parchment: #F7F7F5;
+  --color-border-ui: #E4E5E2;
+  --color-ink: #1C2422;
+  --color-ink-secondary: #68716E;
+  --color-ink-muted: #8A928F;
+  --color-success: #2F6B4F;
+  --color-success-subtle: #EBF4EF;
+  --color-warning: #A66A1F;
+  --color-warning-subtle: #FDF3E7;
+  --color-danger: #A33A3A;
+  --color-danger-subtle: #FAECEC;
+  --color-info: #35627A;
+  --color-info-subtle: #EAF1F5;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F7F5;
+  color: #1C2422;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E4E5E2 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #E4E5E2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #C8CAC7; }
+
+.font-serif { font-family: var(--font-serif); }
+
+/* Compact table style */
+.table-compact td,
+.table-compact th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #1F3A37;
+  outline-offset: 2px;
+}
+
+/* Transition defaults */
+.transition-default {
+  transition: all 150ms ease;
+}
+
+/* Print stylesheet: Print ONLY the cadastral sketch sheet */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #cadastral-sketch-sheet,
+  #cadastral-sketch-sheet * {
+    visibility: visible !important;
+  }
+  #cadastral-sketch-sheet {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "job_id": "53ca2417",
+  "status": "failed",
+  "current_step": 0,
+  "message": "Scraper error: EC PDF generation did not start. Portal may require re-submitting with a fresh CAPTCHA.",
+  "timestamp": 1789574491.5971193,
+  "error": "EC PDF generation did not start. Portal may require re-submitting with a fresh CAPTCHA."
+}

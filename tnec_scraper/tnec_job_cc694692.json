@@ -1,0 +1,10 @@
+{
+  "job_id": "cc694692",
+  "status": "completed",
+  "current_step": 5,
+  "message": "Encumbrance Certificate (EC) successfully downloaded (APP_8400001_TXN_602910695_TMPLT_8400004.pdf).",
+  "timestamp": 1789051446.6599424,
+  "pdf_filename": "APP_8400001_TXN_602910695_TMPLT_8400004.pdf",
+  "pdf_path": "C:\\Users\\w\\Documents\\GitHub\\RED\\tnec_scraper\\downloads\\cc694692\\APP_8400001_TXN_602910695_TMPLT_8400004.pdf",
+  "surveys_count": 1
+}
